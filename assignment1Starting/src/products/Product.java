@@ -11,7 +11,7 @@ public abstract class Product implements Comparable<Product>{
 		this.updatedPrice = updatedPrice;
 	}
 	
-	abstract double calcRealDiff(double originalPrice, double updatedPrice);
+	public abstract double calcRealDiff(double originalPrice, double updatedPrice);
 	
 	public int compareTo(Product other) {
 		return Double.compare(this.calcRealDiff(this.originalPrice, this.updatedPrice), other.calcRealDiff(other.originalPrice, other.updatedPrice));
