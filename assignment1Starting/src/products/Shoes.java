@@ -2,8 +2,7 @@ package products;
 
 public class Shoes extends Product{
 
-	private double originalPrice;
-	private double updatedPrice;
+	
 	private final double ADJUSTMENT = 0.4;
 	
 	public Shoes(double originalPrice, double updatedPrice) {
@@ -11,9 +10,9 @@ public class Shoes extends Product{
 	}
 	
 	@Override
-	double calcRealDiff(double originalPrice, double updatedPrice) {
+	public double calcRealDiff(double originalPrice, double updatedPrice) {
 		
-		return ADJUSTMENT * (Math.abs(originalPrice - updatedPrice));
+		return ADJUSTMENT * (Math.abs(updatedPrice - originalPrice));
 	}
 
 }
